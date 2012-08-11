@@ -18,6 +18,7 @@ class RepresentativesController < ApplicationController
       format.html
       format.json { render json: @representative }
       format.xml  { render xml:  @representative }
+      format.rdf
     end
   end
 

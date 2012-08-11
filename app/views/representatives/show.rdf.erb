@@ -1,0 +1,16 @@
+<rdf:Description rdf:about="<%= show_it_path(@representative) %>">
+  <rdfs:label>Description of representative <%= @representative.full_name %></rdfs:label>
+  <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"><%= @representative.created_at %></dcterms:created>
+  <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"><%= @representative.updated_at %></dcterms:modified>
+  <foaf:primaryTopic rdf:resource="TODO"/>
+</rdf:Description>
+
+<% if false %>
+<foaf:Organization rdf:about="<%= show_it_path(@company.company_number) %>">
+   <foaf:name><%= @company.name %></foaf:name>
+   <ukcompanies:company_number><%= @company.company_number %></ukcompanies:company_number>
+   <vcard:Extadd><%= @company.address %></vcard:Extadd>
+</ns1:Organization>
+<% end %>
+
+<!-- TODO: add the ukcompanies Company house redirect, e.g. <%= redirect_it_path(@company) %> -->
